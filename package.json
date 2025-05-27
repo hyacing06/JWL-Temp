@@ -1,0 +1,36 @@
+{
+  "name": "excel-tracker-electron",
+  "version": "1.0.0",
+  "description": "Electron-based Excel Tracker with Firebase",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "build": {
+    "appId": "com.yourcompany.exceltracker",
+    "productName": "Excel Tracker",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^24.14.1"
+  }
+}
